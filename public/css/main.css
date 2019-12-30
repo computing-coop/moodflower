@@ -216,6 +216,13 @@ a:hover {
   justify-content: space-between;
 }
 
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 
 /* Sidebar */
 .sidebar {
@@ -232,7 +239,15 @@ ul {
 }
 .collab {
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
+}
+.collab .bg {
+  top: -20px;
+  left: -45px;
+  width: 250px;
+}
+.collab svg {
+  margin-left: 10px;
 }
 
 
