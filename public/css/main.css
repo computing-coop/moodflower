@@ -252,14 +252,14 @@ ul {
 .grid .item {
   position: relative;
   margin: 20px 50px;
-  padding: 10px;
   width: 200px;
-  height: 195px;
+  height: 200px;
   background-color: #000;
 }
 .grid .item img {
   display: block;
   width: 100%;
+  height: 100%;
 }
 .grid .item .hover {
   position: absolute;

@@ -1,0 +1,22 @@
+[debug] [2019-12-30T03:35:09.220Z] ----------------------------------------------------------------------
+[debug] [2019-12-30T03:35:09.222Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2019-12-30T03:35:09.223Z] CLI Version:   7.0.2
+[debug] [2019-12-30T03:35:09.223Z] Platform:      darwin
+[debug] [2019-12-30T03:35:09.223Z] Node Version:  v8.11.3
+[debug] [2019-12-30T03:35:09.223Z] Time:          Sun Dec 29 2019 21:35:09 GMT-0600 (CST)
+[debug] [2019-12-30T03:35:09.223Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-12-30T03:35:09.235Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-30T03:35:09.235Z] > authorizing via signed-in user
+[debug] [2019-12-30T03:35:09.235Z] [iam] checking project moodflower-f34d2 for permissions ["firebase.projects.get"]
+[debug] [2019-12-30T03:35:09.237Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/moodflower-f34d2:testIamPermissions  
+
+[debug] [2019-12-30T03:35:09.662Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-30T03:35:09.664Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/moodflower-f34d2  
+ 
+[debug] [2019-12-30T03:35:09.874Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-30T03:35:09.875Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/674427337629/clients/_:getWebAppConfig  
+ 
+[debug] [2019-12-30T03:35:10.167Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
