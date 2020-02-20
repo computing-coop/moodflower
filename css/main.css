@@ -269,9 +269,11 @@ ul {
 }
 .grid .item {
   position: relative;
-  margin: 20px 50px;
-  width: 200px;
-  height: 200px;
+  margin: 1.66vh 50px;
+  max-width: 200px;
+  max-height: 200px;
+  width: 30vh;
+  height: 30vh;
   background-color: #000;
 }
 .grid .item img,
