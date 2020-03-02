@@ -4,7 +4,8 @@
   var acc = document.getElementsByClassName("category");
   var i;
   for (i = 0; i < acc.length; i++) {
-    if (acc[i].classList.contains('active')) {
+    if (acc[i].classList.contains('active') &&
+        window.innerWidth > 600) {
       acc[i].classList.toggle('active');
       toggleList(acc[i]);
     }
@@ -23,6 +24,15 @@
       });
     }
   }
+
+  // Mobile menu
+  var mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  var mobileMenu = document.querySelector('.nav-wrapper');
+  mobileMenuBtn.addEventListener('click', function() {
+    toggleList(this);
+  });
+
+
   function toggleList(el) {
     el.classList.toggle("active");
     var panel = el.nextElementSibling;
@@ -42,6 +52,63 @@
         parent.style.maxHeight = offset + "px";
       }
       parent = parent.parentNode;
+    }
+  }
+
+  // Modal
+  var modalBtns = document.querySelectorAll('.modal-btn');
+  modalBtns.forEach(function(modalBtn) {
+    modalBtn.addEventListener('click', function() {
+      toggleModal(this.getAttribute('data-target'));
+    })
+  })
+  var modalOverlay = document.querySelector('.modals .overlay');
+  modalOverlay.addEventListener('click', function() {
+    closeModal();
+  })
+
+  function toggleModal(id) {
+    let modalsEl = document.querySelector('.modals');
+    let modalEl = document.querySelector(`#${id}`);
+    let modals = document.querySelectorAll('.modal.active');
+    modals.forEach(function(modal) {
+      if (modal.getAttribute('id') !== id) {
+        modal.classList.remove('active');
+      }
+    });
+    modalsEl.classList.toggle('active');
+    modalEl.classList.toggle('active');
+  }
+
+  function closeModal() {
+    let modalsEl = document.querySelector('.modals');
+    let modals = document.querySelectorAll('.modal.active');
+    modals.forEach(function(modal) {
+      modal.classList.remove('active');
+    });
+    modalsEl.classList.remove('active');
+  }
+
+  var jarBtns = document.querySelectorAll('.modal .jar-btn');
+  jarBtns.forEach(function(jarBtn) {
+    jarBtn.addEventListener('click', function() {
+      toggleModalPicture(this, 'jar');
+    })
+  })
+
+  var packetBtns = document.querySelectorAll('.modal .packet-btn');
+  packetBtns.forEach(function(packetBtn) {
+    packetBtn.addEventListener('click', function() {
+      toggleModalPicture(this, 'packet');
+    })
+  })
+
+  function toggleModalPicture(btnEl, type) {
+    let modalEl = btnEl.parentNode.parentNode.parentNode;
+    if (type === 'packet') {
+      modalEl.classList.add('show-packet')
+    } else {
+      modalEl.classList.remove('show-packet')
     }
   }
 

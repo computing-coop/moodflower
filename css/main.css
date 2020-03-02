@@ -111,6 +111,10 @@ a {
 a:hover {
   color: #ddd;
 }
+h2 {
+  font-weight: normal;
+  margin-top: 0
+}
 
 /* ==========================================================================
    Browser Upgrade Prompt
@@ -238,6 +242,7 @@ ul {
   margin: 0 0 0 50px;
 }
 .collab {
+  color: #fff;
   position: absolute;
   bottom: 40px;
 }
@@ -295,23 +300,82 @@ ul {
 }
 
 .modals {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+}
+.modals.active {
+  opacity: 1;
+  z-index: 10;
+}
+.modals .overlay {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1
+  z-index: -1;
+  background-color: rgba(0,0,0,.5)
 }
 .modal {
+  position: absolute;
   display: flex;
   color: #444;
-  display: none;
+  opacity: 0;
   background-color: #fff;
-  padding: 20px;
   margin: 0 auto;
+  max-width: 60%;
+  max-height: 80%;
+  overflow: auto;
+  box-shadow: 0 0 8px 4px rgba(0,0,0,.2);
+  z-index: -1;
 }
-.modal img {
+.modal.active {
+  opacity: 1;
+  z-index: 1;
+}
+.modal .img-wrapper {
+  position: relative;
   width: 400px;
+}
+.modal .img-wrapper img {
+  width: inherit;
+  max-width: inherit;
+}
+.modal .img-wrapper img + img {
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  transition: .2s opacity;
+}
+.modal.show-packet .img-wrapper img + img {
+  opacity: 1;
+}
+.modal .modal-content {
+  padding: 20px;
+}
+.modal .btns {
+  justify-content: space-around;
+  display: flex;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.modal:not(.show-packet) .jar-btn,
+.modal.show-packet .packet-btn {
+  border-bottom: 2px solid #444;
+}
+.modal a {
+  color: #444;
 }
 
 /* Background Video */
@@ -342,6 +406,14 @@ ul {
 }
 .logo img {
   width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+.nav-wrapper {
+  max-height: initial;
+  margin: 0;
 }
 
 /* Mailing List */
@@ -384,8 +456,82 @@ ul {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 600px) {
   /* Style adjustments for viewports that meet the condition */
+  .content {
+    flex-direction: column;
+    padding-top: 100px;
+    height: calc(100vh - 100px);
+  }
+  .content .mobile-menu-btn {
+    display: flex;
+    color: #000;
+    float: right;
+    margin-right: 20px;
+    height: 50px;
+    align-items: center;
+  }
+  .content .collab {
+    position: relative;
+    bottom: auto;
+    margin: 10px 0 20px 28px;
+  }
+  .content .nav-wrapper {
+    position: relative;
+    max-height: 0;
+    margin: 20px 0 0 0;
+    padding: 0 20px;
+    color: #444;
+  }
+  .content .nav-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -1;
+  }
+  .content .nav-wrapper .category a {
+    color: #444;
+  }
+  .content .nav-wrapper > :last-child {
+    margin-bottom: 10px;
+  }
+
+  .grid-container {
+    height: auto;
+  }
+
+  .desktop-video-bg-container {
+    position: fixed;
+  }
+
+  .sidebar {
+    display: block;
+    background-color: #fff;
+    padding: 20px 0;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+  .sidebar .logo {
+    display: inline-block;
+    width: 50px;
+    margin-left: 20px;
+  }
+
+  .modal {
+    max-width: 80%;
+    flex-direction: column;
+  }
+  .modal .img-wrapper {
+    max-width: 100%;
+  }
 }
 
 @media print,
