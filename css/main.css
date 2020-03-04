@@ -215,6 +215,7 @@ h2 {
 }
 
 .content {
+  position: relative;
   display: flex;
   height: 100vh;
   justify-content: space-between;
@@ -245,6 +246,8 @@ ul {
   color: #fff;
   position: absolute;
   bottom: 40px;
+  left: 40px;
+  z-index: 1;
 }
 .collab .bg {
   top: -20px;
@@ -274,7 +277,7 @@ ul {
 }
 .grid .item {
   position: relative;
-  margin: 1.66vh 50px;
+  margin: 1.66vh 40px;
   max-width: 200px;
   max-height: 200px;
   width: 30vh;
@@ -456,10 +459,14 @@ ul {
 
 @media only screen and (max-width: 600px) {
   /* Style adjustments for viewports that meet the condition */
+  .page-body .content {
+    padding-bottom: 140px;
+  }
+
   .content {
     flex-direction: column;
     padding-top: 100px;
-    height: calc(100vh - 100px);
+    height: auto;
   }
   .content .mobile-menu-btn {
     display: flex;
@@ -468,11 +475,6 @@ ul {
     margin-right: 20px;
     height: 50px;
     align-items: center;
-  }
-  .content .collab {
-    position: relative;
-    bottom: auto;
-    margin: 10px 0 20px 28px;
   }
   .content .nav-wrapper {
     position: absolute;
@@ -500,9 +502,13 @@ ul {
   .content .nav-wrapper > :last-child {
     margin-bottom: 10px;
   }
+  .content .right-container {
+    min-height: calc(100vh - 90px)
+  }
 
   .grid-container {
     height: auto;
+    align-items: initial;
   }
 
   .desktop-video-bg-container {
