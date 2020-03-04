@@ -378,6 +378,10 @@ ul {
 .modal a {
   color: #444;
 }
+.modal p {
+  font-size: 16px;
+  line-height: 24px;
+}
 .modal .buy-now-btn {
   color: #fff;
   position: relative;
