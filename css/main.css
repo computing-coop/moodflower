@@ -378,6 +378,16 @@ ul {
 .modal a {
   color: #444;
 }
+.modal .buy-now-btn {
+  color: #fff;
+  position: relative;
+}
+.modal .buy-now-btn .bg {
+  top: 55%;
+  left: 50%;
+  width: 150%;
+  transform: translate(-50%, -50%);
+}
 
 /* Background Video */
 .desktop-video-bg-container {
@@ -546,6 +556,11 @@ ul {
   }
   .modal .img-wrapper {
     max-width: 100%;
+  }
+
+  .collab {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .hide-on-mobile {
