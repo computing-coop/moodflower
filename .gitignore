@@ -39,7 +39,6 @@ temp/
 _SpecRunner.html
 
 # Ignore .html files in root
-/*.html
 !fab-toolbar-demo.html
 
 # Ignore compiled files
