@@ -475,9 +475,12 @@ ul {
     margin: 10px 0 20px 28px;
   }
   .content .nav-wrapper {
-    position: relative;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    left: 0;
     max-height: 0;
-    margin: 20px 0 0 0;
+    margin: 0;
     padding: 0 20px;
     color: #444;
   }
@@ -518,9 +521,17 @@ ul {
     z-index: 10;
   }
   .sidebar .logo {
-    display: inline-block;
-    width: 50px;
+    position: absolute;
     margin-left: 20px;
+    width: auto;
+    max-width: 60%;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .logo {
+    max-width: 100%;
   }
 
   .modal {
@@ -529,6 +540,10 @@ ul {
   }
   .modal .img-wrapper {
     max-width: 100%;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
   }
 }
 

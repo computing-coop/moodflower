@@ -63,9 +63,11 @@
     })
   })
   var modalOverlay = document.querySelector('.modals .overlay');
-  modalOverlay.addEventListener('click', function() {
-    closeModal();
-  })
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', function() {
+      closeModal();
+    })
+  }
 
   function toggleModal(id) {
     let modalsEl = document.querySelector('.modals');
