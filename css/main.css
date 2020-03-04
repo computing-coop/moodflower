@@ -279,7 +279,6 @@ ul {
   max-height: 200px;
   width: 30vh;
   height: 30vh;
-  background-color: #000;
 }
 .grid .item img,
 .grid .item video {
@@ -292,7 +291,6 @@ ul {
   top: 0;
   left: 0;
   opacity: 0;
-  background-color: rgba(0,0,0,.5);
   transition: opacity .3s;
 }
 .grid .item .hover:hover {
