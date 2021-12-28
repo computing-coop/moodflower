@@ -55,6 +55,19 @@
     }
   }
 
+  // Carousel (slick)
+  $(document).ready(function(){
+    $('.img-wrapper').slick({
+      dots: true
+    });
+  });
+
+  // Popup
+  var popupEl = document.querySelector('.popup');
+  popupEl.addEventListener('click', function() {
+    popupEl.classList.toggle('active');
+  });
+
   // Modal
   var modalBtns = document.querySelectorAll('.modal-btn');
   modalBtns.forEach(function(modalBtn) {
