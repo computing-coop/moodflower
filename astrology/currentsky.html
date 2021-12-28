@@ -11,18 +11,26 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
 
   <meta name="theme-color" content="#fafafa">
   <style type="text/css">
     a {
       color: #FA5300;
     }
+    @media only screen and (max-width: 600px) {
+      .sidebar {
+        background-color: white; /* Mobile navbar background */
+      }
+      .currentsky {
+        margin: 0 !important;
+      }
+    }
   </style>
 </head>
 
-<body class="page-body" style="background-color: #E5CA01; color: #FA5300">
+<body class="page-body" style="color: #FA5300">
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -31,13 +39,13 @@
   <!-- Background -->
   <div class="content">
 
-    <div class="sidebar">
-      <a class="logo hide-on-desktop" href="index.html">
+    <div class="sidebar"> <!-- Nav bar background color -->
+      <a class="logo hide-on-desktop" href="../index.html">
         moodflower
-        <img src="img/moodflower-banner.png" alt=""> <!-- Flower in logo -->
+        <img src="../img/moodflower-banner.png" alt=""> <!-- Flower in logo -->
       </a>
-      <a class="logo hide-on-mobile" href="index.html">
-        <img src="img/moodflowerlogo1.png" alt="">
+      <a class="logo hide-on-mobile" href="../index.html">
+        <img src="../img/moodflowerlogo1.png" alt="">
       </a>
       <a class="mobile-menu-btn" href="#!">
         <svg height="32" width="32" viewBox="0 0 64 64">
@@ -51,26 +59,23 @@
       <ul class="nav-wrapper">
         <div class="category">herbal tea</div>
         <ul>
-          <li><a href="body.html">body</a></li>
+          <li><a href="../body.html">body</a></li>
           <li>metaphysical</li>
-          <li><a href="soundsxmoodflower.html">sounds X moodflower</a></li>
+          <li><a href="../soundsxmoodflower.html">sounds X moodflower</a></li>
         </ul>
         <div class="category">astrology</div>
         <ul>
-          <li><a href="astrology/readings.html">readings</a></li>
+          <li><a href="readings.html">readings</a></li>
           <li>writing</li>
-          <li><a href="astrology/resources.html">resources</a></li>
-          <li><a href="astrology/currentsky.html">current sky</a></li>
+          <li><a href="resources.html">resources</a></li>
+          <li><a href="currentsky.html">current sky</a></li>
         </ul>
-        <div class="category"><a href="about.html">about</a></div>
+        <div class="category"><a href="../about.html">about</a></div>
       </ul>
     </div>
 
-    <div style="margin: 0 10%">
-      <p>Moodflower is an experimental designer of herbal teas and potions based in Bushwick, Brooklyn, creating recipes that encourage self-care at a holistic level.</p>
-      <p>Get in touch:
-        <a href="mailto:moodflowerherbs@gmail.com" target="_top">moodflowerherbs@gmail.com</a>
-      </p>
+    <div class="currentsky" style="display: flex; margin: 0 auto; align-items: center;">
+      <iframe src="http://planetwatcher.com/widget" frameborder="0" style="border:none #CCCCCC 1px; overflow:hidden; width:650px; height:700px;">This widget requires iframes. Since your browser does not support iframes, you may visit <a href="http://planetwatcher.com" target="_blank">PlanetWatcher</a> for a chart of the moment.</iframe>
     </div>
   </div>
 
@@ -80,11 +85,11 @@
 
 
 
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="../js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>
