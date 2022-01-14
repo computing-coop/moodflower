@@ -7,13 +7,25 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+ /* TYPEFACES-------------------------------------- */
+
+@font-face {
+	font-family: 'SelectricMono';
+	src: url('/assets/fonts/SelectricMono.otf');
+}
+
+@font-face {
+	font-family: 'SelectricRoman';
+	src: url('/assets/fonts/SelectricRoman.otf');
+}
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
 html {
-  color: #fff;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff7e4;
+  font-family: 'SelectricRoman', Helvetica, Arial, sans-serif;
   font-size: 24px;
   line-height: 1.4;
 }
@@ -105,7 +117,7 @@ li {
   cursor: pointer;
 }
 a {
-  color: #fff;
+  color: rgb(126, 78, 14);
   text-decoration: none;
 }
 a:hover {
@@ -244,7 +256,7 @@ ul {
   margin: 0 0 0 50px;
 }
 .collab {
-  color: #fff;
+  color: rgb(126, 78, 14);
   position: absolute;
   bottom: 40px;
   left: 40px;
@@ -266,7 +278,7 @@ ul {
   width: 200px;
   height: 100px;
   border: 2px solid black;
-  background-color: #fff;
+  background-color: fff;
   color: #444;
   padding: 10px 10px 10px 40px;
   overflow: hidden;
@@ -470,6 +482,8 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-top: 10vh;
+  padding-right: 10vh;
 }
 
 .logo {
@@ -485,6 +499,8 @@ ul {
 .nav-wrapper {
   max-height: initial;
   margin: 0;
+  margin-top: 5vh;
+  color: rgb(126, 78, 14)
 }
 
 /* Mailing List */
